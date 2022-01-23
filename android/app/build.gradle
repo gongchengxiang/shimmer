@@ -196,12 +196,6 @@ android {
         }
     }
 
-    // 设置webapp资源路径
-    sourceSets {
-        main {
-            assets.srcDirs = ['../../webapp.bundle']
-        }
-    }
 }
 
 dependencies {
