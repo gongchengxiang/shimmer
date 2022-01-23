@@ -75,10 +75,10 @@ class App extends React.Component {
       width: Dimensions.get('window').width,
       height: Dimensions.get('window').height - StatusBar.currentHeight,
     };
-    // const source =
-    //   Platform.OS === 'android'
-    //     ? 'file:///android_asset/index.html'
-    //     : 'index.html';
+    const source =
+      Platform.OS === 'android'
+        ? 'file:///android_asset/index.html'
+        : 'index.html';
     return (
       <SafeAreaView>
         <StatusBar
@@ -90,7 +90,7 @@ class App extends React.Component {
           <WebView
             style={webviewStyle}
             ref={this.webview}
-            source={{uri: 'http://www.baidu.com/'}}
+            source={{uri: source}}
             originWhitelist={['https://*', 'http://*']}
             javaScriptEnabled={true}
             scalesPageToFit={false}
